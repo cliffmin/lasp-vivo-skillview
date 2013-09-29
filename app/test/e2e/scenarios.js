@@ -1,4 +1,6 @@
 'use strict';
+/* JASMINE quick ref API is here
+https://github.com/pivotal/jasmine/wiki/Matchers */
 
 /* http://docs.angularjs.org/guide/dev_guide.e2e-testing */
 //IMPORTANT: Remember when counting tables the title counts as one
