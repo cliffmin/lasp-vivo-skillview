@@ -13,7 +13,7 @@ module.exports = function(config) {
         autoWatch: true,
 
         proxies: {
-            '/': 'http://localhost:8000/'
+            '/': 'http://localhost:3000/'
         },
 
         urlRoot: '__karma__',

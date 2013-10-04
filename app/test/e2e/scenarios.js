@@ -18,7 +18,6 @@ describe('LEMR App', function() {
       browser().navigateTo('../../index.html#/');
     });
 
-
     it('should filter the personel list as user types into the search box', function() {
       expect(repeater('tr').count()).toBe(20);
 
@@ -60,4 +59,5 @@ describe('LEMR App', function() {
     });
 
   });
+
 });
