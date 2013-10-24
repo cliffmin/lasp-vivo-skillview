@@ -1,15 +1,15 @@
 'use strict';
  
-describe('controller: allSkillsCtrl', function(){
+describe('controller: AllSkillsCtrl', function(){
     
     beforeEach(function(){
-		module('skillsmodule');
+		module('skillsModule');
     });
     
     beforeEach(inject(function($controller, $rootScope, dataFactory, formatFactory, $httpBackend) {
     	this.$httpBackend = $httpBackend;
     	this.scope = $rootScope.$new();
-    	$controller('allSkillsCtrl', {
+    	$controller('AllSkillsCtrl', {
     		$scope: this.scope, 
     		dataFactory: dataFactory,
     		formatFactory: formatFactory

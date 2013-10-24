@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="skillsmodule">
+<html lang="en" ng-app="skillsModule">
 	<head>
 		<meta charset="utf-8" />
 		<title>LEMR : Skills</title>
@@ -9,17 +9,13 @@
 		
 		<link rel="stylesheet" href="styles/bootstrap.css">
 		<link rel="stylesheet" href="styles/app.css">
-		<script src="bower_components/jquery/jquery.min.js"></script>
-		<script src="bower_components/jquery/jquery-ui.min.js"></script>
-		<script src="bower_components/angular/angular.min.js"></script>
-		<script src="bower_components/angular-dragdrop.min.js"></script>
-		<script src="bower_components/ui-bootstrap-tpls-0.6.0.js"></script>
+		<script src="bower_components/*.js"></script>
+		<script src="app/scripts/lib/*.js"></script>
 		<script src="scripts/app.js"></script>
-		<script src="scripts/Controllers/allSkillsCtrl.js"></script>	
-		<script src="scripts/Controllers/mapASkillCtrl.js"></script>
-		<script src="scripts/directives.js"></script>
-		<script src="scripts/filters.js"></script>
-		<script src="scripts/factories.js"></script>
+		<script src="scripts/controllers/*.js"></script>
+		<script src="scripts/directives/*.js"></script>
+		<script src="scripts/filters/*.js"></script>
+		<script src="scripts/services/*.js"></script>
 	</head>
 
 	<body class="no-logo fae">

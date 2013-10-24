@@ -2,7 +2,7 @@
 
 
 /* Controllers */
-skillsmodule.controller('allSkillsCtrl', ['$scope','dataFactory','formatFactory',function ($scope, dataFactory, formatFactory){      
+skillsModule.controller('AllSkillsCtrl', ['$scope','dataFactory','formatFactory',function ($scope, dataFactory, formatFactory){
     
     getPersonnel();
     
