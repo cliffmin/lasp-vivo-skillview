@@ -293,10 +293,15 @@ module.exports = function (grunt) {
     },
     karma: {
       unit: {
-        configFile: 'test/config/karma.conf.js',
+        configFile: 'test/config/karma-unit.conf.js',
         singleRun: true
-      }
-    },
+
+	    },
+      e2e: {
+	configFile: 'test/config/karma-unit.conf.js',
+	singleRun: true
+	   }
+	   },
     cdnify: {
       dist: {
         html: ['<%= yeoman.dist %>/*.html']
@@ -337,12 +342,20 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('test', [
+  grunt.registerTask('test:unit', [
     'clean:server',
-    'concurrent:test',
-    'autoprefixer',
+    'coffee',
+    'compass',
     'connect:test',
-    'karma'
+    'karma:unit'
+  ]);
+
+  grunt.registerTask('test:e2e', [
+    'clean:server',
+    'coffee',
+    'compass',
+    'connect:test',
+    'karma:e2e'
   ]);
 
   grunt.registerTask('build', [

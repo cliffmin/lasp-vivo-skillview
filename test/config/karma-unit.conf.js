@@ -4,21 +4,31 @@
 module.exports = function(config) {
   config.set({
     // base path, that will be used to resolve files and exclude
-    basePath: '../',
+    basePath: '../..',
 
     // testing framework to use (jasmine/mocha/qunit/...)
-    frameworks: ['ng-scenario'],
+    frameworks: ['jasmine'],
 
     // list of files / patterns to load in the browser
     files: [
-      'e2e/scenarios.js'
+      'app/bower_components/angular/angular.js',
+      'app/bower_components/jquery/jquery.min.js',
+      'app/bower_components/jquery/jquery-ui.min.js',
+      'app/bower_components/ui-bootstrap-tpls-0.6.0.js',
+      'app/bower_components/angular-dragdrop.min.js',
+      'app/bower_components/angular-mocks/angular-mocks.js',
+      'app/scripts/*.js',
+      'app/scripts/**/*.js',
+      'test/unit/*.js'
+//      'test/mock/**/*.js',
+//      'test/spec/**/*.js'
     ],
 
     // list of files / patterns to exclude
     exclude: [],
 
     // web server port
-    port: 9000,
+    port: 8080,
 
     // level of logging
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
@@ -26,7 +36,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
 
     // Start these browsers, currently available:
@@ -42,13 +52,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false,
-
-    // Uncomment the following lines if you are using grunt's server to run the tests
-     proxies: {
-      '/': 'http://localhost:9000/'
-     },
-    // URL root prevent conflicts with the site root
-     urlRoot: '_karma_'
+    singleRun: false
   });
 };
